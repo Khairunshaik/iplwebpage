@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height : 50%;
+            width : 50%;
+            /* border : 2px solid black; */
+            padding : 20px;
+            margin : 100px auto;
+        }
+        input{
+            width : 250px;
+            outline : none;
+            border : none;
+            border-bottom : 1px solid black;
+            font-size : 15px;
+            padding : 10px;
+            border-right: 20px;
+        }
+        button{
+            background-color: mediumslateblue;
+            border : none;
+            color : white;
+            font-size : 16px;
+            padding : 10px 10px;
+            border-radius: 30px;
+            cursor : pointer;
+        }
+        .l{
+            list-style : none;
+            width : 100px;
+            background-color: pink;
+            color:black;
+            border-radius : 20px;
+            padding : 10px 12px;
+            font-size : 16px;
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <input type="text" name="" id="item">
+        <button id="add-btn">Add to list</button>
+        <button id="clear">Clear</button>
+        <ul id="list">
+            <li class="l">Sleep</li>
+            <li class="l">Walk</li>
+        </ul>
+        <button id="deleteAll">Delete All</button>
+        <button id="deleteFirst">Delete First one</button>
+        <button id="deleteLast">Delete Last one</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

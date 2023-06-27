@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: mediumslateblue;
+            border : none;
+            color : white;
+            font-size : 16px;
+            padding : 10px 10px;
+            border-radius: 30px;
+            cursor : pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("mouseover" , function(){
+            const colors = ["red" , "green" , "purple" , "orange" , "pink" , "black"];
+
+            let index = Math.floor(Math.random() * colors.length);
+
+            document.body.style.backgroundColor = colors[index];
+        })
+
+        btn.addEventListener("mouseout" , function(){
+            document.body.style.backgroundColor = "yellow";
+        })
+    </script>
+</body>
+</html>

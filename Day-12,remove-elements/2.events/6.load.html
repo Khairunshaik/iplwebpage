@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img" src="https://tse3.mm.bing.net/th?id=OIP.juQAbJVffaotHPMfh7KrAHaEo&pid=Api&P=0&h=180">
+
+
+    <script>
+
+        let img = document.getElementById("img");
+
+        img.addEventListener("load", function(){
+            console.log("image loaded successfully")
+        })
+
+        
+        img.addEventListener("error", function(){
+            let h1 = document.createElement("h1")
+            h1.innerText = "Image not loaded......"
+            document.body.appendChild(h1)
+        })
+    </script>
+</body>
+</html>

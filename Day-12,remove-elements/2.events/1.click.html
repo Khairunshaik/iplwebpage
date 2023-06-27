@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+
+
+
+    <script>
+        let btn=document.getElementById("btn");
+
+        //for creating h1 from script
+        btn.addEventListener('click' , function(){
+            let h1 = document.createElement("h1");
+            h1.innerText = "Added by single click";
+            document.body.appendChild(h1);
+        })
+
+
+        //for single click and double click displayed on console window
+        // btn.addEventListener('click' , function(){
+        //     console.log("single click")
+        // })
+        // btn.addEventListener('dblclick' , function(){
+        //     console.log("double click")
+        // })
+    </script>
+</body>
+</html>
