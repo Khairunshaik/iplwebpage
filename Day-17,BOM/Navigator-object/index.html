@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">click me</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click" , function(){
+            // console.log(navigator.userAgent);
+            // console.log(navigator.language);
+            // console.log(navigator.platform);
+            // navigator.vibrate([100,200,100]);
+
+            //for location
+            // navigator.geolocation.getCurrentPosition(function(position){
+            //     console.log(position.coords.latitude);
+            //     console.log(position.coords.longitude);
+            // })
+            
+
+            //for audio and video permissions
+            // navigator.mediaDevices.getUserMedia({video:true, audio:true})
+            // .then(function(stream){
+            //     console.log("video and audio access are done")
+            //     console.log(stream)
+            // })
+            
+
+            //shows whether connected to internet or not
+            // console.log(navigator.onLine);
+
+
+            console.log(navigator.connection);
+
+        });
+
+    </script>
+
+</body>
+</html>

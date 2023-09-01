@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <p>Chinnu</p>
+    <p>Fathima</p>
+    <p>Tamum</p>
+    <p>Noori</p>
+    <p>Rafi</p>
+    <p>Ali</p>
+
+    <button id="btn">Run a each</button>
+
+    <script>
+        $("#btn").click(function(){
+            $("p").each(function(){
+                alert($(this).text())
+            })
+        });
+    </script>
+</body>
+</html>

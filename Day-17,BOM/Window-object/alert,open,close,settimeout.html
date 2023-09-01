@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+
+    <!-- this is for alert -->
+    <!-- <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            alert("Welcome to my page")
+        });
+    </script> -->
+
+    <!-- setTimeout -->
+    <!-- <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            setTimeout(function(){
+                console.log("hello")
+            },2000);
+        });
+    </script> -->
+
+
+    <!-- setInterval -->
+    <!-- <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            setInterval(function(){
+                console.log(new Date())
+            },1000);
+        });
+    </script> -->
+
+    <!-- clearinterval -->
+    <!-- <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            let id=setInterval(function(){
+                console.log(new Date())
+            },1000);
+            setTimeout(function(){
+                clearInterval(id)
+            },5000);
+        });
+    </script> -->
+
+    <!-- open -->
+    <!-- <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            open("https://youtube.com")
+            or
+            open("https://google.com")
+        });
+    </script> -->
+
+    <!-- close -->
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            close()
+        });
+    </script>
+</body>
+</html>

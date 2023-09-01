@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">click me</button>
+    <button id="btn2">printing from session storage</button>
+    <button id="btn3">Remove city from session storage</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click" , function(){
+            sessionStorage.setItem("name" , "chinnu")
+            sessionStorage.setItem("city" , "rjy")
+            sessionStorage.setItem("country" , "india")
+        });
+
+
+
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click" , function(){
+            const name = sessionStorage.getItem("name")
+            const city = sessionStorage.getItem("city")
+            const country = sessionStorage.getItem("country")
+
+
+            // let p = document.createElement("p");
+            // p.innerText = country;
+            // document.body.appendChild(p);
+
+            console.log(name, city, country);
+        });
+
+
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click" , function(){
+            sessionStorage.removeItem("country");
+        });
+    </script>
+
+</body>
+</html>

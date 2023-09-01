@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+</head>
+<body>
+    <button id="btn">Fade Out</button>
+    <button id="btn2">Fade In</button>
+    <button id="btn3">Fade Toggle</button>
+    <button id="btn4">Slide Up</button>
+    <button id="btn5">Slide Down</button>
+    <br/>
+    <br/>
+    <img id="pic" src="https://tse1.mm.bing.net/th?id=OIP.D4F6BJf2RGa-VGo_h7i9TwHaEH&pid=Api&P=0&h=180" alt="">
+
+
+    <script>
+
+        //toggle
+        // setInterval(()=>{
+        //     $("#pic").toggle();
+        // },2000)
+
+        //fadeout
+        $("#btn").click(()=>{
+            $("#pic").fadeOut();
+        })
+
+        //fade in
+        $("#btn2").click(()=>{
+            $("#pic").fadeIn();
+        })
+
+        //fade toggle
+        $("#btn3").click(()=>{
+            $("#pic").fadeToggle();
+        })
+
+        //slide up
+        $("#btn4").click(()=>{
+            $("#pic").slideUp();
+        })
+
+        //slide down
+        $("#btn5").click(()=>{
+            $("#pic").slideDown();
+        })
+    </script>
+</body>
+</html>

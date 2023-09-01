@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <button id="btn4">Button 4</button>
+    <input type="text" id="name">
+
+    <script>
+        $("#btn1").click(()=>{
+            $("body").css("background-color" , "red");
+        })
+        $("#btn2").dblclick(()=>{
+            $("body").css("background-color" , "blue");
+        })
+        $("#btn3").mouseover(()=>{
+            $("body").css("background-color" , "pink");
+        })
+        $("#btn4").mouseout(()=>{
+            $("body").css("background-color" , "orange");
+        })
+        $("#name").keydown(function(event){
+            console.log(event.key);
+        })
+    </script>
+    
+</body>
+</html>

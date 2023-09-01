@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 class="heading">My Company Logo 1</h1>
+    <h1 class="heading">My Company Logo 2</h1>
+    <h1 class="heading">My Company Logo 3</h1>
+
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Khairunnisa</p>
+    <button id="btn">Click Me</button>
+
+    <script>
+        let x = $('p')
+        // console.log(x)
+        // console.log(x.length)
+        // console.log(x[0].textContent)  //to display the text content
+        // console.log(x[1].textContent) 
+        // console.log(x[2].textContent)
+
+        let btn = $("#btn");
+        // console.log(btn.text());
+
+        //how you are going select tags using class name
+        let y= $('.heading');
+        console.log(y[0].textContent);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        img{
+        height: 400px;
+        width: 400px;
+        position: relative;
+        left: 35%;
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, voluptate!</p>
+    <img id="pic" src="https://images.newindianexpress.com/uploads/user/imagelibrary/2021/1/18/w600X390/Sidharth_Malhotra_PTI.jpg" alt="">
+    <script>
+       $('#p1').text("I have changed my paragraph ")
+       $('#p1').css("color" , "blue")
+       $('#p1').css("font-size", "50px")
+       $('#p1').css("background-color", "yellow")
+       $('#p1').css("padding" , "20px")
+
+    //    setTimeout(() => {
+    //         $('#pic').hide();
+    //    }, 2000);
+
+
+        let flag=true;
+        setInterval(() => {
+            if(flag){
+                $('#pic').show();
+                flag=false;
+            }
+            else{
+                $('#pic').hide();
+                flag=true;
+            }
+        } , 2000);
+    </script>
+</body>
+</html>

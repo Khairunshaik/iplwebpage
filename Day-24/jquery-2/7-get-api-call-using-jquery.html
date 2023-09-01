@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" name=""  id="movie" >
+    <button id="btn">Call a API and get Data</button>
+    <br/>
+    <br/>
+    <br/>
+
+    <script>
+        
+        $("#btn").click(function(){
+            // i'll write code to call api using jQuery
+            // let obj={}
+            let movie= $("#movie").val();
+            console.log(movie);
+            $.ajax({
+                url: `https://www.omdbapi.com/?s=${movie}&apikey=53b4ed65`,
+                method:"GET",
+                success: function(response){
+                    // alert("API call done");
+                    console.log(response.Search);
+
+                    for(i=0;i<response.Search.length;i++){
+                        let img = $("<img>")
+                        img.attr("src",response.Search[i].Poster);
+                        $("body").append(img);
+                    }
+                },
+                error: function(error){
+                    alert("API call failed");
+                    console.log("error");
+                },
+            })
+
+        });
+    </script>
+    
+</body>
+</html>

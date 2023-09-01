@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .p1{
+            color: violet;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My company logo</h1>
+
+    <script>
+        //this p element is created using DOM
+        // let p= document.createElement('p');
+        // p.innerText = 'Hello World';
+        // document.body.append(p);
+
+        let p = $("<p></p>")
+        p.text("Paragraph is added using Jquery")
+        p.addClass("p1")
+        $("body").append(p)
+
+
+        let ul = $("<ul>");
+
+        let li1 = $("<li>").text("item1")
+        let li2 = $("<li>").text("item2")
+        let li3 = $("<li>").text("item3")
+
+        ul.append(li1 , li2 , li3)
+        $("body").append(ul);
+    </script>
+</body>
+</html>
