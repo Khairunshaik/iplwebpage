@@ -1,0 +1,241 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Players</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="card-container"></div>
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Players</title>
+    <style>
+        /* Add your CSS styles for the cards, buttons, and search bar here */
+        /* Use flexbox or grid for layout */
+    </style>
+</head>
+<body>
+    <header>
+        <button id="addTeamButton">Add Team</button>
+        <button id="addPlayerButton">Add Player</button>
+        <input type="text" id="teamSearch" placeholder="Search by Team">
+    </header>
+    <div id="playerGrid" class="card-grid">
+        Player cards will be dynamically added here using JavaScript -->
+    <!-- </div>
+    <div id="playerDetailsPage">
+        <!-- Player details will be displayed here when a card is clicked -->
+    </div>
+    <script>
+        // Sample data
+        const data = [
+            {
+                "id": 0,
+                "playerName": "Hardik Pandya",
+                "from": "MI",
+                "price": "6.50 Cr",
+                "isPlaying": true,
+                "description": "All-rounder"
+            },
+            // Add more player objects here
+        ];
+
+        // Function to create a player card
+        function createPlayerCard(player) {
+            const card = document.createElement("div");
+            card.className = "player-card";
+            // Add HTML and styles for player card content here
+            return card;
+        }
+
+        // Function to display player details when a card is clicked
+        function showPlayerDetails(player) {
+            const playerDetailsPage = document.getElementById("playerDetailsPage");
+            // Add HTML and styles for player details page content here
+            playerDetailsPage.innerHTML = `<h2>${player.playerName}</h2>
+                                           <img src="${player.photo}" alt="${player.playerName}">
+                                           <p>Team: ${player.from}</p>
+                                           <p>Price: ${player.price}</p>
+                                           <p>Playing Status: ${player.isPlaying ? "Playing" : "On-bench"}</p>
+                                           <p>Role: ${player.description}</p>`;
+        }
+
+        // Function to filter players by team and display them
+        function filterPlayersByTeam(teamCode) {
+            // Filter players based on teamCode from the data array
+            const filteredPlayers = data.filter(player => player.from === teamCode);
+            const playerGrid = document.getElementById("playerGrid");
+            playerGrid.innerHTML = ""; // Clear existing cards
+            filteredPlayers.forEach(player => {
+                const card = createPlayerCard(player);
+                card.addEventListener("click", () => showPlayerDetails(player));
+                playerGrid.appendChild(card);
+            });
+        }
+
+        // Add event listeners for buttons and search bar
+        const addTeamButton = document.getElementById("addTeamButton");
+        addTeamButton.addEventListener("click", () => {
+            // Implement logic to add a new team to local storage and update UI
+        });
+
+        const addPlayerButton = document.getElementById("addPlayerButton");
+        addPlayerButton.addEventListener("click", () => {
+            // Implement logic to add a new player to local storage and update UI
+        });
+
+        const teamSearch = document.getElementById("teamSearch");
+        teamSearch.addEventListener("input", () => {
+            const teamCode = teamSearch.value.toUpperCase();
+            filterPlayersByTeam(teamCode);
+        });
+
+        // Initial load to display all players
+        filterPlayersByTeam("");
+
+    </script>
+</body>
+</html> --> -->
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Player Cards</title>
+    <style>
+        /* Add your CSS styles for player cards here */
+        .player-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indian Premier League Players</h1>
+    </header>
+    <div id="playerList">
+        <!-- Player cards will be dynamically added here using JavaScript -->
+    </div>
+    <script>
+        // Sample data for players
+        const players = [
+            {
+                "id": 0,
+                "playerName": "Hardik Pandya",
+                "from": "MI",
+                "price": "6.50 Cr",
+                "isPlaying": true,
+                "description": "All-rounder"
+            },
+            {
+                "id": 1,
+                "playerName": "Virat Kohli",
+                "from": "RCB",
+                "price": "8.00 Cr",
+                "isPlaying": true,
+                "description": "Batsman"
+            },
+            {
+                "id": 2,
+                "playerName": "Yuvraj Singh",
+                "from": "MI",
+                "price": "1.00 Cr",
+                "isPlaying": false,
+                "description": "Batsman"
+            },
+            {
+                "id": 3,
+                "playerName": "Chris Morris",
+                "from": "RR",
+                "price": "16.25 Cr",
+                "isPlaying": true,
+                "description": "All-rounder"
+            },
+            {
+                "id": 4,
+                "playerName": "Glenn Maxwell",
+                "from": "RCB",
+                "price": "14.25",
+                "isPlaying": true,
+                "description": "All-rounder"
+            },
+            {
+                "id": 5,
+                "playerName": "Rohit Sharma",
+                "from": "MI",
+                "price": "6.50 Cr",
+                "isPlaying": true,
+                "description": "Batsman"
+            },
+            {
+                "id": 6,
+                "playerName": "Ishan Kishan",
+                "from": "MI",
+                "price": "2.50 Cr",
+                "isPlaying": true,
+                "description": "Batsman"
+            }
+            // Add more player objects here
+        ];
+
+        // Function to create a player card
+        function createPlayerCard(player) {
+            const card = document.createElement("div");
+            card.className = "player-card";
+            card.innerHTML = `
+                <h2>${player.playerName}</h2>
+                <p>Team: ${player.from}</p>
+                <p>Price: ${player.price}</p>
+                <p>Playing Status: ${player.isPlaying ? "Playing" : "On-bench"}</p>
+                <p>Role: ${player.description}</p>
+            `;
+            return card;
+        }
+
+        // Function to filter players by team and display them
+        function displayPlayersByTeam(team) {
+            const playerList = document.getElementById("playerList");
+            playerList.innerHTML = ""; // Clear existing player cards
+            const filteredPlayers = players.filter(player => player.from === team);
+            filteredPlayers.forEach(player => {
+                const card = createPlayerCard(player);
+                playerList.appendChild(card);
+            });
+        }
+
+        // Initial load to display players for CSK
+        displayPlayersByTeam("CSK");
+    </script>
+</body>
+</html>
